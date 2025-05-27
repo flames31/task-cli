@@ -23,6 +23,12 @@ Once the repository is downloaded, build the program using below command.
 go build .
 ```
 
+Create a ".env" file and set the json file path to which tasks will be saved.
+
+```bash
+FILE_PATH=<path_to_file>
+```
+
 Interact with tasks using
 
 ```bash
