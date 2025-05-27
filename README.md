@@ -17,16 +17,16 @@
 
 ## Usage
 
-Once the repository is downloaded, build the program using below command.
-
-```bash
-go build .
-```
-
-Create a ".env" file and set the json file path to which tasks will be saved.
+Once the repository is downloaded, create a ".env" file and set the json file path to which tasks will be saved.
 
 ```bash
 FILE_PATH=<path_to_file>
+```
+
+Build the program using below command.
+
+```bash
+go build .
 ```
 
 Interact with tasks using
