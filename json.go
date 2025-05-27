@@ -3,11 +3,10 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"os"
 	"time"
 )
-
-const jsonPath = "/Users/rahul31/Desktop/GoProjects/task-cli/tasks.json"
 
 type Data struct {
 	MetaData `json:"metadata"`
@@ -27,6 +26,10 @@ type Task struct {
 }
 
 func getData() (Data, error) {
+	jsonPath := os.Getenv("FILE_PATH")
+	if jsonPath == "" {
+		log.Fatalf("Json file path not set!")
+	}
 	jsonFile, err := os.Open(jsonPath)
 	if err != nil {
 		return Data{}, fmt.Errorf("error opening json file : %w", err)
@@ -45,6 +48,10 @@ func getData() (Data, error) {
 }
 
 func saveJSON(data Data) error {
+	jsonPath := os.Getenv("FILE_PATH")
+	if jsonPath == "" {
+		log.Fatalf("Json file path not set!")
+	}
 	jsonFile, err := os.Create(jsonPath)
 	if err != nil {
 		return fmt.Errorf("error opening json file : %w", err)

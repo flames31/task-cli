@@ -4,6 +4,7 @@ import (
 	"log"
 	"os"
 
+	"github.com/joho/godotenv"
 	"github.com/urfave/cli/v2"
 )
 
@@ -11,6 +12,7 @@ func main() {
 	app := cli.NewApp()
 	app.Name = "Basic task todo CLI app written in go"
 	app.Usage = "Use the 'help' command to find more!"
+	godotenv.Load(".env")
 
 	app.Commands = []*cli.Command{
 		{
