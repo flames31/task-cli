@@ -23,7 +23,7 @@ Each task includes the following properties:
 {
   "id": 1,
   "description": "Buy groceries",
-  "status": "todo",           // or: in-progress, done
+  "status": "todo",
   "createdAt": "2024-05-21T12:00:00Z",
   "updatedAt": "2024-05-21T12:00:00Z"
 }
