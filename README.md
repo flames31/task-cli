@@ -15,6 +15,26 @@
 
 ---
 
+## Usage
+
+Once the repository is downloaded, build the program using below command.
+
+```bash
+go build .
+```
+
+Interact with tasks using
+
+```bash
+task-cli <command_name> <args>...
+```
+
+Use help to learn usage of commands
+
+```bash
+task-cli <command_name> help
+```
+
 ## Task Structure
 
 Each task includes the following properties:
@@ -27,3 +47,5 @@ Each task includes the following properties:
   "createdAt": "2024-05-21T12:00:00Z",
   "updatedAt": "2024-05-21T12:00:00Z"
 }
+```
+
